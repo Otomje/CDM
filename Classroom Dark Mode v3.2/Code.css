@@ -1,5 +1,5 @@
 /* Classroom Dark Mode v3.0 */
-/* Код створений для локального використовування. Забороняється продавати код. Код написаний розробником: "otomje" */
+/* Код створений для локального використовування. Забороняється продавати код. Код написаний розробником: "@otomje" */
 /* Для роботи скрипта потрібне розширення браузера > "Stylus" */
 /* Створено: 12/11/2025. Останнє оновлення: 1/12/2025 */
 
@@ -8,28 +8,26 @@
 :root {
  --none: transparent;
  --selection: rgb(130, 130, 150);
- --header-nav: rgba(40, 40, 42, .9);
- --footer: rgba(40, 40, 42, .8);
- --phn1: rgb(40, 40, 42); /* Основний фон */
- --phn2: rgb(45, 45, 47); /* Фон всяких блоков */
- --phn3: rgb(50, 50, 52); /* Фон кнопок */
- --phn4: rgb(55, 55, 57); /* Другое */
- --phn-crs: rgb(44, 44, 46);
- --phn-crs-hover: rgb(47, 47, 48);
- --phn1-hover: rgb(42, 42, 44);
- --phn2-hover: rgb(47 ,47, 49);
- --phn3-hover: rgb(52, 52, 54);
- --border-crs: transparent;
- --txt1: #fafaff; /* Светлее */
- --txt2: #e6e6eb; /* Середне */
- --txt3: #d2d2d7;  /* Темное */
- --b: black;
- --a: #aaaaff;
- --r: red;
- --g: green;
- --p: purple;
+ --header: rgba(40, 40, 42, .9);
+ --nav: rgba(40, 40, 42, .8);
+ --left-bar: rgba(40, 40, 42, .8);
+ --border-header-nav: rgb(40, 40, 42);
+ --background-1: rgb(40, 40, 42);
+ --background-2: rgb(45, 45, 47);
+ --background-3: rgb(50, 50, 52);
+ --background-4: rgb(55, 55, 57);
+ --background-1-hover: rgb(42, 42, 44);
+ --background-2-hover: rgb(47 ,47, 49);
+ --background-3-hover: rgb(52, 52, 54);
+ --background-course: rgb(44, 44, 46);
+ --background-course-hover: rgb(46, 46, 48);
+ --border-course: transparent;
+ --txt1: #fafaff;
+ --txt2: #e6e6eb;
+ --txt3: #d2d2d7;
+ --link: #aaaaff;
  --w: white;
- --y: yellow;
+ --b: black;
 }
 
 ::selection {
@@ -60,7 +58,7 @@
 
 body,
 .fXYYpf .T4LgNb { /* Фон головного екрану */
- background: var(--phn1);
+ background: var(--background-1);
 }
 
 .Po14Kd { /* Загрузка */
@@ -71,35 +69,29 @@ body,
  background: var(--txt1);
 }
 
-.joJglb { /* Хеадер */
- background: var(--header-nav);
- backdrop-filter: blur(20px);
- border-bottom: 1px solid var(--phn1);
-}
-
 .y183Ub { /* Текст "Клас" в хеадер */
  color: var(--txt2);
 }
 
-.mwJvDe .KEDCCd { /* Якийсь під - хеадер в вибраному курсі */
- background: var(--footer);
+.mwJvDe .KEDCCd { /* Нав */
+ background: var(--nav);
  border-radius: 0 0 0 0;
  backdrop-filter: blur(20px);
  border: none;
- border-top: 1px solid var(--phn1);
+ border-top: 1px solid var(--background-1);
 }
 
 .tCcYY, .EXL71e { /* Нав */
- background: var(--header-nav);
+ background: var(--left-bar);
  backdrop-filter: blur(20px);
 }
 
 .wQiG5d { /* Вибрана вкладка в наві */
- background: var(--phn2);
+ background: var(--background-2);
 }
 
 .OkLq5b { /* Штука яка робить гарний пе реход з хеадера на нав */
- fill: var(--header-nav);
+ fill: var(--header);
 }
 
 .YVvGBb { /* Просто текст звичайного коліру в нав */
@@ -110,8 +102,8 @@ body,
 }
 
 .Aopndd { /* Фон з налаштуваннями */
- background: var(--phn2);
- border: 2px solid var(--phn3);
+ background: var(--background-2);
+ border: 2px solid var(--background-3);
 }
 
 .NMm5M { /* Іконки но треба продивитися */
@@ -160,10 +152,12 @@ body,
 .slDfNd, .slDfNd:visited, .U0QIdc, .U0QIdc:visited,
 .onkcGd, .onkcGd:visited, .WPhuJf, .WPhuJf:visited,
 .UywwFc-LgbsSe:focus-visible .UywwFc-kBDsod-Rtc0Jf,
+.AeBiU-LgbsSe:focus-visible .AeBiU-kBDsod-Rtc0Jf,
 .mUIrbf-LgbsSe:focus-visible .mUIrbf-vQzf8d,
 .UywwFc-LgbsSe:active .UywwFc-kBDsod-Rtc0Jf,
 .yixX5e:hover .UtdKPb, .yixX5e:focus .UtdKPb,
 .UywwFc-LgbsSe:focus-visible .UywwFc-vQzf8d,
+.AeBiU-LgbsSe:focus-visible .AeBiU-vQzf8d,
 .uW2Fw-Sx9Kwc-OWXEXe-vOE8Lb .uW2Fw-k2Wrsb,
 .uW2Fw-Sx9Kwc-OWXEXe-n2to0e .uW2Fw-k2Wrsb,
 .rHGeGc-O1htCb:hover .rHGeGc-uusGie-fmcmS,
@@ -174,6 +168,7 @@ body,
 .FOBRw-LgbsSe:active .FOBRw-vQzf8d,
 .UywwFc-LgbsSe:active .UywwFc-vQzf8d,
 .YPA3Vb-LgbsSe:active .YPA3Vb-vQzf8d,
+.mUIrbf-LgbsSe:hover .mUIrbf-vQzf8d,
 .FOBRw-LgbsSe:hover .FOBRw-vQzf8d,
 .AeBiU-LgbsSe:active .AeBiU-vQzf8d,
 .gb_B[aria-expanded=true] .gb_F,
@@ -181,6 +176,7 @@ body,
 .zuzKle.xVPuB, .zuzKle.vnnr5e,
 .pYTkkf-Bz112c-LgbsSe:active,
 .vnnr5e:not(.RDPZE).u3bW4e,
+.aqdrmf-rymPhb-fpDzbe-fmcmS,
 .rHGeGc-uusGie-fmcmS,
 .Eajscb .vT1Gyc.pCcXPe,
 .Eajscb .vT1Gyc.N4XV7d,
@@ -243,14 +239,15 @@ body,
 .OVu6ob .q1Kmyc:has(.u3bW4e),
 .q1Kmyc { /* Цвет бордера */
  border: 0;
- background: var(--phn3);
+ background: var(--background-3);
 }
 
 .w482V-O1htCb:hover .w482V-CZC2Ab-i5vt6e,
 .w482V-O1htCb.rHGeGc-O1htCb-OWXEXe-XpnDCe .w482V-CZC2Ab-i5vt6e { /* Там де вибираєш потрібні тобі курси. колір оконця */
- --gm3-notched-outline-border-color: var(--txt2);
+ --gm3-notched-outline-border-color: var(--txt3);
 }
 
+.qdOxv-fmcmS-yrriRe-OWXEXe-INsAgc:not(.qdOxv-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.qdOxv-fmcmS-yrriRe-OWXEXe-XpnDCe):hover,
 .Hwv4mb .onkcGd:focus .Pce5Kb, .Hwv4mb .onkcGd:hover .Pce5Kb,
 .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe.vTcY1d .snByac,
 .UywwFc-LgbsSe:hover .UywwFc-kBDsod-Rtc0Jf,
@@ -258,7 +255,6 @@ body,
 .xVPuB .snByac, .vnnr5e .snByac,
 .EN2Rfc:not(.RDPZE) .XTO5bf:hover,
 .YPA3Vb-LgbsSe:hover .YPA3Vb-vQzf8d,
-.mUIrbf-LgbsSe:hover .mUIrbf-vQzf8d,
 .aqdrmf-rymPhb-L8ivfd-fmcmS,
 .jWOS7-Bz112c-LgbsSe:hover,
 .jWOS7-Bz112c-LgbsSe:active,
@@ -303,96 +299,102 @@ body,
 .YPA3Vb-LgbsSe,
 .OVu6ob .s2g3Xd,
 .Hsjwae .zaxms {
- background: var(--phn2);
+ background: var(--background-2);
 }
 
 .FOBRw-LgbsSe {
- background: var(--phn1);
+ background: var(--background-1);
 }
 
 .n4xnA { /* Фон завданнь в середині курсів */
- background: var(--phn2);
+ background: var(--background-2);
  transition: background 80ms linear;
 }
 
 .n4xnA:hover {
- background: var(--phn2-hover);
+ background: var(--background-2-hover);
 }
 
 .JkIgWb { /* Прикріплений файл */
- background: var(--phn3);
+ background: var(--background-3);
  transition: all 100ms linear;
  display: flex;
  flex-direction: row-reverse;
 }
 
 .JkIgWb:hover {
- background: var(--phn3-hover);
+ background: var(--background-3-hover);
 }
 
 .UywwFc-LgbsSe:hover {
- background: var(--phn4);
+ background: var(--background-4);
 }
 
 .Eajscb .vT1Gyc.F262Ye { /* В календарі при вибраній даті */
- background: var(--phn4);
+ background: var(--background-4);
 }
 
 .riU7le { /* Нижній фон курсу */
- background: var(--phn-crs);
+ background: var(--background-course);
  border-radius: .8rem;
  border: 0;
  transition: all 80ms linear;
 }
 
+.xo7QFd:hover, .xo7QFd:focus-within {
+ background: var(--none);
+}
+
 .riU7le:hover {
- background: var(--phn-crs-hover);
+ background: var(--background-course-hover);
 }
 
 .pYTkkf-Bz112c-LgbsSe { /* 3 крапки  */
  color: var(--txt2);
- --gm3-ripple-hover-color: var(--phn1);
+ --gm3-ripple-hover-color: var(--background-1);
 }
 
 .hN1OOc.eumXzf::after { /* Полоска в курсі на вибраній вкладці */
  border-color: var(--txt3);
 }
 
-.hN1OOc.eumXzf:hover, .hN1OOc.eumXzf:focus { /* Фон в курсі на вибраній вкладкі ховер ну те що зверху */
- background: rgba(from var(--phn4) r g b/.08);
- border-radius: 10px 10px 0 0;
+.hN1OOc.eumXzf:hover, .hN1OOc.eumXzf:focus, .hN1OOc.eumXzf:focus, .hN1OOc.eumXzf:focus:not(:focus-visible) { /* Нав текст */
+ background: var(--background-2);
+ border-radius: 5px 5px 0 0;
 }
 
 .OVu6ob .d4Fe0d,
 .d4Fe0d { /* Фон доп штучок в середині курсу */
- background: var(--phn2);
+ background: var(--background-2);
  border: 0;
 }
 
 .mUIrbf-LgbsSe:active .mUIrbf-kBDsod-Rtc0Jf,
 .gXNsG, .gXNsG:hover, .gXNsG:focus,
 .mUIrbf-LgbsSe:hover .mUIrbf-kBDsod-Rtc0Jf,
+.gXNsG, .gXNsG:visited,
 .mUIrbf-LgbsSe:hover,
+.U0QIdc:hover,
 .mUIrbf-kBDsod-Rtc0Jf { /* Текст в курсі "Переглянути всі завдання які треба здати" */
- color: var(--a);
+ color: var(--link);
 }
 
 .GWZ7yf { /* Фон в курсі в завданні там де завдання прикріпити */
- background: var(--phn2);
+ background: var(--background-2);
 }
 
 .UywwFc-LgbsSe { /* Кнопка щоб здати завдання */
- background: var(--phn3);
+ background: var(--background-3);
 }
 
 .j70YMc a:any-link {
- color: var(--a);
+ color: var(--link);
  text-decoration: none;
  user-select: none;
 }
 
 .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL { /* Налаштування кнопок щоб написати повідомлення */
- background: var(--phn1);
+ background: var(--background-1);
  border-radius: 9999px;
 }
 
@@ -409,11 +411,11 @@ body,
 }
 
 .nl5VRd { /* Роздільник тексту в завданні */
- border-bottom: 2px solid var(--phn3);
+ border-bottom: 1px solid var(--w);
 }
 
 .ar1wE .eqqrO, .ySjuvd .eqqrO { 
- border-top: 2px solid var(--phn3);
+ border-top: 1px solid var(--w);
 }
 
 .O9YpHb,
@@ -428,7 +430,7 @@ body,
 }
 
 .cC1eCc .VfPpkd-P5QLlc { /* Фон який появляється при відміні здачі завдання */
- background: var(--phn2);
+ background: var(--background-2);
 }
 
 .Fgl6fe-fmcmS-yrriRe-OWXEXe-MFS4be:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me) { /* Налаштування курсу прибираємо фон де є рядки тексту */
@@ -440,20 +442,20 @@ background: var( --none);
 }
 
 .TgJ2ub .IzVHde { /* Фон з інформацією про курс */
- background: var(--phn2);
+ background: var(--background-2);
 }
 
 .zaxms,
 .uW2Fw-P5QLlc { /* Фон зі створення курсу */
- background: var(--phn2);
+ background: var(--background-2);
 }
 
 .UywwFc-LgbsSe,
 .mUIrbf-LgbsSe,
 .AeBiU-LgbsSe { /* Колір кнопки при ховері там де приєднатись до зустрічі */
- --sbadab: var(--phn4);
- --F1tVH: var(--phn4);
- --jF0a9c: var(--phn3);
+ --sbadab: var(--background-4);
+ --F1tVH: var(--background-4);
+ --jF0a9c: var(--background-3);
  --kDWEsd: var(--gm3-button-outlined-pressed-state-layer-opacity,1);
  --hSHBee: var(--gm3-button-outlined-hover-state-layer-opacity,1);
 }
@@ -481,6 +483,21 @@ body {
  padding: 0;
 }
 
+.joJglb { /* Хеадер */
+ background: var(--header);
+ backdrop-filter: blur(20px);
+ border-bottom: 1px solid var(--border-header-nav);
+}
+
+.rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus, /* Бокс шадов на курсах офає */
+.F4Ol1b:not(.eXqTtb) .STek2d:hover, .F4Ol1b:not(.eXqTtb) .STek2d:focus-within { /* Вимикає в нав бокс шадов */
+ box-shadow: none;
+}
+
+.STek2d { /* Нав */
+ border-right: 1px solid var(--border-header-nav);
+}
+
 .TQYOZc { /* Додано скрол для завданнь курсу */
  overflow-y: auto;
 }
@@ -503,11 +520,11 @@ body {
 }
 
 .SZ0kZe { /* Полоска розділяюча 3 кнопки і завдання знизу на курсі */
- border-top: 2px solid var(--border-crs);
+ border-top: 2px solid var(--border-course);
 }
 
 .ZizeYd.qm64Ve { /* Дає опасити/фон розмитості */
- background: var(--phn1);
+ background: var(--background-1);
  opacity: .5;
 }
 
@@ -542,7 +559,7 @@ body {
 }*/
 
 .PFLqgc { /* В курсі фон з текстом трошки його прикриваємо */
- opacity: .5;
+ opacity: .2;
 }
 
 .dbEQNc { /* Ширина всіх блоків в самому курсі */
@@ -575,7 +592,7 @@ b {
 .uBUej,
 .AeBiU-LgbsSe { /* Прибераєм обводку в кнопкі "Приєднатись до зустрічі" */
  border: 0 !important;
- background: var(--phn3);
+ background: var(--background-3);
 }
 
 .q1Kmyc { /* Заокруглення для написання тексту */
@@ -606,7 +623,7 @@ b {
 }
 
 .RIDjNe { /* В календарі змінює бордер/роздільник днів */
- border-right: .0625rem solid var(--phn4);
+ border-right: .0625rem solid var(--background-4);
 }
 
 .YrFhrf-ZoZQ1 { /* Розмір тексту в курсі, курсу */
@@ -641,7 +658,7 @@ b {
 }
 
 .MdjMac { /* В курсі окно якщо нема нічого */
- background: var(--phn2);
+ background: var(--background-2);
 }
 
 .Sgw65b {
@@ -653,13 +670,13 @@ b {
 }
 
 .MHxtic { /* Налаштування там де завдання */
- transition: background 60ms linear;
+ transition: background 80ms linear;
  box-shadow: none;
 }
 
 .MHxtic:focus-within,
 .MHxtic:hover {
- background: var(--phn2);
+ background: var(--background-2);
  box-shadow: none;
 }
 
@@ -689,4 +706,9 @@ b {
 .Aitr4c { /* Тіки текст */
  justify-content: center;
 }
+
+.rZXyy.YwNp1:not(.xp2dJ), .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ) { /* Нормальний курсор при наведенні на курс */
+ cursor: all-scroll;
+}
+
 /* ---------- Тест / Кастом ---------- */
