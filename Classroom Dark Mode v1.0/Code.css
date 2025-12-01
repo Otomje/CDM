@@ -1,0 +1,444 @@
+/* Цей скрипт створений і використовується для власного користування. 
+   Він може бути недоробленим, тому можливі баги. */
+
+/* Для роботи скрипта потрібен Stylus:
+   https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne */
+
+/* ---------- ГОЛОВНА СТОРІНКА (Cписок Курсів) ---------- */
+
+::-webkit-scrollbar {
+ display: none;
+}
+
+body {
+ background: #282832;
+ user-select: none;
+}
+
+.IqBfM { /* Фон нижньої частини на головній сторінці */
+ background: #282832;
+}
+
+.TdC1bb,
+.TdC1bb, .Hsjwae .avfKs { /* Фон блоку, де відображаються курси */
+ background: #282832;
+ padding-top: 1.6rem !important;
+ padding-bottom: 1.6rem !important;
+ padding-left: 1.6rem !important;
+}
+
+.Hsjwae .avfKs { /* Вимикаємо паддинг ненужний */
+ padding: 0px;
+}
+
+.ygEKvf:not(:empty) {
+ padding-bottom: 1.5rem;
+}
+
+.KV3Lre {  /* Приховує панель, яка приховує курси */
+ display: none;
+}
+
+.riU7le { /* Обвідка блоків з курсами та колір фону */
+ border: none;
+ border-radius: 1rem;
+ background-color: #323246;
+}
+
+.N6nSod { /* Прибирає іконку знаку питання знизу */
+ display: none;
+}
+
+.PNzAWd { /* Прибирає іконки на картках курсів */
+ height: 4.2rem;
+ width: 4.2rem;
+ margin-top: -3.25rem;
+ display: none;
+}
+
+.gHz6xd { /* Розміри блоків курсів */
+ height: 18rem;
+ width: 19rem;
+}
+
+.gb_J .gb_B, .gb_J .gb_B:hover, .gb_J .gb_B:focus { /* Приховує "9 крапок" (додатки Google) */
+ display: none;
+}
+
+.OkLq5b,
+.joJglb,
+.rknsod { /* Фон бічної та верхньої панелі Classroom */
+ background: #323246;
+ fill: #323246;
+}
+
+.m2eIad,
+.ykp8pd,
+.I2pI,
+.pYTkkf-Bz112c-LgbsSe,
+.oxacD.pYTkkf-Bz112c-LgbsSe { /* Колір кнопок */
+ color: #dcdcfa;
+}
+
+.Hsjwae .SZ0kZe { /* Залишає тільки меню з трьома крапками, інші кнопки приховує */
+ gap: 10000rem;
+ padding: .3rem .25rem;
+ border-top: 0rem solid var(--gm3-sys-color-outline-variant,#282832);
+}
+
+.F4Ol1b .tCcYY.yWU57c:not(:hover):not(:focus-within) .wQiG5d, .F4Ol1b .tCcYY.yWU57c:not(:hover):not(:focus-within) .pzaVke { /* Це полосочка яка показує на якій сторінці я знаходжусь */
+ top: 10%;
+ bottom: 10%;
+ right: 84%;
+}
+
+.tCcYY { /* Вимикає якийсь білй фон */
+ background-color: transparent;
+}
+
+.Ij01W { /* Відступ від картинки до тексту з лівої навігації */
+ margin-left: .40rem;
+}
+
+.uTwgne.TbJ0Pc:nth-of-type(2) { /* Вимикаємо календарь з лівої навігації і не тільки */
+ display: none;
+}
+
+.s28puc.s28puc.s28puc { /* Вмикаємо відображення палочок/роздільників в лівій навігації */
+ background-color: #dcdcfa;
+ height: 1px;
+}
+
+.TQYOZc { /* Додає прокрутку курсам "Виправлений баг самими розробниками допущений" */
+ overflow-y: auto;
+}
+
+.A6dC2c, .saYe1e,
+.ViCi4 { /* Кольор тексту в налаштуваннях */
+ color: #dcdcfa;
+ font-weight: 400;
+}
+
+.mUIrbf-LgbsSe:hover,
+.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf .mUIrbf-vQzf8d { /* Кольор тексту блоків */
+ color: #dcdcfa;
+}
+
+.R4EiSb { /* Фон на курсі який знаходиться зверху */
+ background: transparent;
+}
+
+.OmA97e { /* Приховує картинки на схованих курсах */
+ display: none;
+}
+
+.s2g3Xd,
+.E5f6Vd { /* Це колір полоски */
+ border-top: 4px solid #323246;
+}
+
+.ZizeYd.qm64Ve { /* Повністю приховує картинки на курсах */
+ background: transparent;
+ opacity: 1;
+}
+
+.Hsjwae .ScpeUc { /* Прибирає виділення тексту з верхньої назви */
+ user-select: none;
+}
+
+.Hsjwae .FWGURc { /* Прибирає виділення тексту з середньої назви */
+ user-select: none;
+}
+
+.prWPdf, .jJIbcc { /* Прибирає виділення тексту з нижньої назви */
+ user-select: none;
+}
+
+.YVvGBb,
+.Hwv4mb .onkcGd:focus .Pce5Kb, .Hwv4mb .onkcGd:hover .Pce5Kb,
+.CbuVcc .Pce5Kb { /* Колір тексту */
+ color: #dcdcfa;
+}
+
+.lGIiYb,
+.wQiG5d { /* Фон при натисканні на текст */
+ background-color: #282832;
+}
+
+.lGIiYb {
+ border: none;
+}
+
+.Hsjwae .ygEKvf,
+.Hsjwae .JwPp0e { /* Відступи між блоками */
+ gap: 1.6rem;
+}
+
+.PFLqgc,
+.OjOEXb, .ZizeYd, .O7utsb, .ZmqAt { /* Прозорість блоку з уроками. "0 = Не прозоре; 1 = Прозоре" */
+ opacity: .5;
+}
+
+.gHz6xd {
+ border-bottom: 2px solid transparent;
+}
+
+.gHz6xd:hover {
+ border-bottom: 2px solid #323246; 
+}
+
+.YPT36c,
+.YPT36c.XnKFHd {
+ display: none;
+}
+
+/* Бета функція
+.gHz6xd {
+ width: 100%;
+}
+
+.TdC1bb, .TdC1bb, .Hsjwae .avfKs {
+ padding-right: 1.6rem;
+}
+*/
+
+
+/* ---------- СТОРІНКА ВСЕРЕДИНІ КУРСУ ---------- */
+
+/*.zOtZye {  Приховує додаткову панель зверху
+ display: none;
+}*/
+
+.dbEQNc,
+.CSivxe,
+.fXYYpf .T4LgNb { /* Фон сторінки */
+ background: #282832;
+}
+
+.dbEQNc { /* Розмір сторінки */
+ max-width: 65rem;
+}
+
+.mwJvDe .KEDCCd { /* Верхня панель */
+ background: #282832;
+ border: none;
+}
+
+.Aopndd { /* Прибирає додаткові рамки навколо блоків */
+ border: none;
+}
+
+.qk0lee { /* Колір кнопки "Перейти до курсу" */
+ background: #323246;
+}
+
+/*.mUIrbf-LgbsSe { Прибирає кнопку "Показати більше" 
+  display: none;
+}*/
+
+.google-symbols,
+.google-material-icons { /* Колір іконок (наприклад, 3 крапки біля Meet) */
+ color: #dcdcfa;
+}
+
+.NA2Gt { /* Приховує панель з відео - зустрічю */
+ display: none;
+}
+
+.d4Fe0d { /* Вимикає бордер та змінює колір фону */
+ background-color: #323246;
+ border: none;
+}
+
+.S6Zsqe,
+.xo2x2e { /* Кольор тексту */
+ color: #dcdcfa;
+}
+
+.wZTANe .J1raN,
+.wZTANe .J1raN:hover,
+.hN1OOc.eumXzf { /* Текст у верхньому лівому куті */
+ color: #dcdcfa;
+}
+
+.rHGeGc-O1htCb.rHGeGc-O1htCb-OWXEXe-XpnDCe .rHGeGc-uusGie-fmcmS,
+.mUIrbf-LgbsSe:hover .mUIrbf-vQzf8d,
+.mUIrbf-LgbsSe:active .mUIrbf-vQzf8d,
+.rHGeGc-uusGie-fmcmS,
+.onkcGd, .onkcGd:visited,
+.y9bEQb>*:not(:last-child),
+.Hsjwae .nt2KVb,
+.mUIrbf-vQzf8d,
+.WOPwXe,
+.iiWxqc,
+.ksaOtd,
+.zYqAyf,
+.iwLfoe,
+.B7SYid,
+.sCv5Q,
+.jg22B,
+.aHMLCc,
+.TAjiIf a,
+.ARTZne,
+.nk37z,
+.jDlKLb,
+.YrFhrf,
+.dDKhVc,
+.sGXire,
+.PVm5Od,
+.p,
+.e0prFf,
+.IMvYId, .IMvYId:visited,
+.WkZsyc .J33wTc,
+.K013Jb,
+.MocG8c,
+.KGC9Kd-YBO6pd,
+.aqdrmf-rymPhb-fpDzbe-fmcmS,
+.aqdrmf-rymPhb-L8ivfd-fmcmS,
+.Fgl6fe-fmcmS-yrriRe:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me) .Fgl6fe-fmcmS-wGMbrd,
+.vqwr2c-W0vJo-fmcmS-OWXEXe-zvnfze,
+.dA2hVd-NLUYnc-xRPttf-OhKo9c, .dA2hVd-NLUYnc-xRPttf-DbgRPb, .dA2hVd-NLUYnc-xRPttf-NLUYnc,
+.Fgl6fe-fmcmS-yrriRe:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .Fgl6fe-fmcmS-wGMbrd,
+.gtuckc,
+.pYTkkf-Bz112c-LgbsSe:disabled,
+.pco8Kc,
+.WZdtef,
+.sdmSCf,
+.Z3qXvc { /* Основний текст */
+ color: #dcdcfa;
+}
+
+.xSP5ic:not([disabled]), .xSP5ic:not([disabled]).yHy1rc, .xSP5ic:not([disabled]).pYTkkf-Bz112c-LgbsSe { /* Іконки */
+ color: #dcdcfa;
+ fill: #dcdcfa;
+}
+
+.rHGeGc-t08AT-Bz112c { /* Іконка-стрілка для розгортання */
+ fill: #dcdcfa;
+}
+
+.qk0lee:hover .K6Ovqd,
+.K6Ovqd { /* Текст для звертання до курсу */
+ color: #dcdcfa;
+}
+
+.tGZ0W { /* Текст завдань – здано */
+ color: lightgreen;
+}
+
+.udxSmc { /* Текст завдань – не здано */
+ color: lightgrey;
+}
+
+.CHJgKd { /* Приховує кнопку "Показати більше завдань які треба зробити" */
+ display: none;
+}
+
+.q1Kmyc { /* Це бордер що з'являється тоді коли звертаєшся до когось/коментарій */
+ border-radius: .6rem;
+}
+
+.EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL { /* Вимикає фон, коли вибираєш наприклад "жирний стиль тексту" */
+ background-color: transparent;
+}
+
+.TgJ2ub .IzVHde { /* Колір опису курсу */
+ background-color: #323246;
+}
+
+
+.oZ63bb { /* Код курсу */
+ user-select: text;
+ color: #dcdcfa;
+}
+
+/* ---------- ВСЕ ЩО ЗНАХОДИТЬСЯ В ЗАВДАННІ ---------- */
+
+.GWZ7yf { /* Фон для коментарів та моїх завдань */
+ background: #323246;
+}
+
+.Aopndd { /* Блок який прикріплений вчителем "Відео, фото чи мої відправлені файли" */
+ background: #282832;
+ border: 4px solid #323246;
+}
+
+.Niache { /* Видаляю зайву білу полоску */
+ border: none;
+}
+
+.r0VQac .bHOAdb, .Yzgtqe .bHOAdb, .luto0c .bHOAdb { /* Менший відступ від контенту до тексту */
+ margin-right: .5rem;
+}
+
+.z3vRcc, .tDxNLe { /* Текст "Мої завдання" */
+ color: #dcdcfa;
+}
+
+.fOvfyc { /* Заголовок завдання */
+ user-select: text;
+}
+
+.tLDEHd { /* Головний опис завдання та також "Завдання не прикріплено" */
+ color: #dcdcfa;
+ user-select: text;
+}
+
+.asQXV { /* Термін до коли я повинен здати завдання, коментарії та лс */
+ color: #dcdcfa;
+}
+
+.slDfNd, .slDfNd:visited, .U0QIdc, .U0QIdc:visited { /* Блок який прикріплений вчителем а саме текст */
+ color: #dcdcfa;
+ text-decoration: none;
+}
+
+.j70YMc a:any-link { /* Посилання від учителя наприклад "naurok.com" */
+ color: white;
+ text-decoration: none;
+ }
+ 
+.AeBiU-vQzf8d,
+.UywwFc-vQzf8d,
+.AeBiU-kBDsod-Rtc0Jf i, .AeBiU-kBDsod-Rtc0Jf img, .AeBiU-kBDsod-Rtc0Jf svg { /* Колір для плюсика та тексту тобто для "додати файл" */
+  color: #dcdcfa;
+ }
+ 
+.UywwFc-LgbsSe { /* Це колір кнопки "Позначити як виконане" */
+ background: red;
+}
+
+/* ---------- БЛОК ЯКИЙ ВІДПРАВЛЯЄ СПОВІЩЕННЯ КУРСУ ---------- */
+
+.vnnr5e .I9OJHe, .vnnr5e .CIy9F,
+.Fgl6fe-fmcmS-yrriRe-OWXEXe-MFS4be:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me),
+.hgjBDc { /* Колір фону */
+ background-color: #323246;
+}
+
+.vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe.vTcY1d .snByac,
+.UywwFc-LgbsSe:disabled .UywwFc-vQzf8d,
+.xVPuB .snByac, .vnnr5e .snByac,
+.zuzKle.xVPuB, .zuzKle.vnnr5e,
+.DPvwYc { /* Кольор іконок та тексту */
+ color: #dcdcfa;
+}
+
+/* ---------- БЛОК ЯКИЙ ВІДПРАВЛЯЄ МОЮ РОБОТУ КУРСУ ---------- */
+
+.hYt5f.EfvGO .WkZsyc,
+.ghqpJb .i2Zkcd:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me),
+.cC1eCc .VfPpkd-P5QLlc { /* Колір фону скасування надсилання */
+ background-color: #323246;
+}
+
+.cC1eCc .VfPpkd-cnG4Wd,
+.cC1eCc .VfPpkd-k2Wrsb { /* Колір тексту в блоці */
+ color: #dcdcfa;
+}
+
+.mUIrbf-LgbsSe { /* Ховер тексту */
+--gm3-ripple-pressed-color: var(--gm3-button-text-hover-state-layer-color,var(--gm3-sys-color-primary,#dcdcfa));
+--gm3-ripple-hover-color: var(--gm3-button-text-hover-state-layer-color,var(--gm3-sys-color-primary,#dcdcfa));
+--gm3-focus-ring-outward-color: var(--gm3-button-outlined-focus-indicator-color,var(--gm3-sys-color-secondary,#dcdcfa));
+}

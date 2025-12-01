@@ -1,10 +1,11 @@
 # CDM
-This is a stylish, minimalist, dark theme for Google Classroom.
+A stylish, minimalist dark theme for **Google Classroom**.
 
-## Installation instructions:
-1. Install the "Stylus" extension for your browser
-2. Copy the code of this repository
-3. Go to extensions and create a new style
-4. In the editor, paste the copied code
-5. At the bottom select "URL starting with..." there will be a field where you can enter the link. In our case it is https://classroom.google.com
-6. Save the project and start use it!
+## Installation
+
+1. Install the **Stylus** extension for your browser (Chrome, Firefox, etc.).
+2. Open this repository and copy the theme code.
+3. Click the Stylus icon in your browser → select "Create new style".
+4. In the editor window, paste the copied code.
+5. At the bottom, choose URL starting with: and enter: "https://classroom.google.com"
+6. Save the style and reload Google Classroom — the theme should be applied automatically.
