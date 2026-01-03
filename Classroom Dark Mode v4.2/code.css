@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           CMD / Classroom Dark Mode
-@namespace      github.com/otomje
+@namespace      https://github.com/otomje/cdm
 @description    Dark theme for Google Classroom
 @version        4.2.0
 @author         Otomje
@@ -8,7 +8,7 @@
 
 /* Found a bug or want to ask something? Here are the contacts: Mail="d8315461@gmail.com" Telegram="@otomje" */
 /* Donate: send.monobank.ua/jar/3ACrruy1AZ */
-/* Version
+/* Version:
    Update v4.2: 25.12.2025,
    Update v4.1: 19.12.2025,
    Update v4.0: 12.12.2025
@@ -22,10 +22,10 @@
 
 :root {
  /* "Режим розробника" */
- --sas: red;
+ --bcd: red;
  /* Основа */
  --none: transparent;
- --selection: rgb(150, 150, 170);
+ --selection: rgb(100, 100, 180);
  --blur-1: blur(10px);
  --blur-2: blur(20px);
  --blur-3: blur(30px);
@@ -66,14 +66,13 @@
  --link: rgb(200, 200, 250);
 }
 
+/* *:hover {
+ outline: 1px solid var(--bcd);
+} */
+
 ::selection {
  background-color: var(--selection);
 }
-
-/* *:hover {
- outline: 1px solid var(--sas);
-} */
-
 
 /* Scroll off */
 * {
@@ -351,7 +350,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 /* -- Блок с курсами -- */
 
 .riU7le { /* Курс <Баг> */
- border: 1px solid var(--border-course);
+ border: 0px solid var(--border-course);
  background: var(--background-course);
  transition: background 80ms linear;
  cursor: default !important;
@@ -828,19 +827,26 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-Bz112c-M1Soyc.UywwFc-LgbsSe-OWXEXe-dgl
  transition: background 70ms linear;
 }
 
-.ii7kld:not(.xp2dJ):has(> :first-child:focus) {
+/* .ii7kld:not(.xp2dJ):has(> :first-child:focus) {
  border-radius: 8px 8px 0 0 !important;
-}
+} */
 
-.ii7kld:not(.xp2dJ):focus-within,
 .ii7kld:not(.xp2dJ):focus,
 .ii7kld:not(.xp2dJ):active,
 .ii7kld:not(.xp2dJ):hover { /* Ховер блоків з завданнями */
  background: var(--background-2);
 }
 
+.ii7kld:not(.xp2dJ):focus-within { /* Фон фокуса <бета> */
+ background: var(--background-2);
+}
+
 .lXuxY .u73Apc, .pO6AMc .u73Apc, .PqkECe .u73Apc, .S9CVKb, .UW3s6d { /* При нажатии на блок з завданнями */
  background: var(--background-2) !important;
+}
+
+.S9CVKb { /* Зсовує блок з інформацією про завдання в гору на -px <бета> */
+ margin-top: -6px;
 }
 
 .QUEiXc, .ZnNi8e .u7S8tc, .Ea4RVb { /* Коліра текста */
@@ -1074,6 +1080,7 @@ button.FOBRw-LgbsSe.FOBRw-LgbsSe-OWXEXe-Bz112c-M1Soyc.FOBRw-LgbsSe-OWXEXe-dgl2Hf
 
 .JkIgWb, .vwNuXe.QRiHXd { /* Міняєм місцями контент */
  padding-right: 10px;
+ user-select: none;
  display: flex;
  flex-direction: row-reverse;
 }
@@ -1235,7 +1242,7 @@ button.oOPNbc-LgbsSe.oOPNbc-LgbsSe-OWXEXe-Bz112c-M1Soyc.oOPNbc-LgbsSe-OWXEXe-dgl
  color: var(--color-2)
 }
 
-/* --- Виставлення оцінок "сторінка" ---*/
+/* --- Виставлення оцінок "Сторінка" ---*/
 
 .nk37z { /* Назва завдання */
  color: var(--color-1);
@@ -1383,7 +1390,3 @@ button.oOPNbc-LgbsSe.oOPNbc-LgbsSe-OWXEXe-Bz112c-M1Soyc.oOPNbc-LgbsSe-OWXEXe-dgl
 .r2ZjL-O1htCb .rHGeGc-TkwUic { 
  background: var(--background-2) !important;
 }}
-
-
-
-
